@@ -1110,6 +1110,162 @@
   }
   .yt-modal-close:hover { opacity: 1; }
 
+  /* ─────────────────────────────────────────────
+     RESPONSIVE — TABLET  (max 900px)
+  ───────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    nav { padding: 20px 32px; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 120px 32px 80px;
+      text-align: center;
+      min-height: auto;
+    }
+    .hero-left { padding-top: 0; }
+    .hero-actions { justify-content: center; }
+    .hero-right { display: none; }
+    .scroll-indicator { display: none; }
+
+    .stats-bar {
+      padding: 20px 32px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .stat-item { border-right: none; padding: 0; }
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) { border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+
+    .about {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      padding: 80px 32px;
+    }
+
+    .artist-drawer-inner {
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+    }
+
+    .featured { padding: 60px 32px 80px; }
+    .featured-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .featured-grid { grid-template-columns: 1fr; }
+
+    .services { padding: 80px 32px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 36px 32px 28px; }
+
+    .listen { padding: 60px 32px 80px; }
+    .listen-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .videos-grid { grid-template-columns: 1fr 1fr; }
+
+    .contact {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      padding: 80px 32px;
+    }
+    .contact-info { padding-top: 0; order: -1; }
+
+    footer {
+      padding: 28px 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .yt-modal-box { width: 95vw; }
+  }
+
+  /* ─────────────────────────────────────────────
+     RESPONSIVE — MOBILE  (max 600px)
+  ───────────────────────────────────────────── */
+  @media (max-width: 600px) {
+    /* Kill custom cursor on touch */
+    .custom-cursor, .cursor-ring { display: none !important; }
+    * { cursor: auto !important; }
+
+    /* Nav */
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .nav-cta {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+
+    /* Hero */
+    .hero { padding: 100px 20px 60px; }
+    .hero-tag { font-size: 10px; }
+    .hero h1 { font-size: clamp(32px, 9vw, 48px); }
+    .hero-sub { font-size: 14px; }
+    .hero-actions { flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+    .btn-primary { width: 100%; text-align: center; padding: 16px 24px; }
+    .btn-ghost { justify-content: center; }
+
+    /* Stats */
+    .stats-bar {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+      gap: 16px;
+    }
+    .stat-num { font-size: 30px; }
+    .stat-label { font-size: 10px; }
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) { padding-bottom: 16px; }
+
+    /* About */
+    .about { padding: 60px 20px; gap: 40px; }
+    .section-title { font-size: clamp(28px, 7vw, 40px); }
+
+    .artist-card-header { padding: 20px; }
+    .artist-name { font-size: 20px; }
+    .artist-drawer-inner {
+      grid-template-columns: 1fr;
+      padding: 0 20px 24px;
+    }
+    .artist-photo {
+      aspect-ratio: 4/3;
+      object-position: top;
+      width: 100%;
+    }
+
+    /* Featured Work */
+    .featured { padding: 48px 20px 60px; }
+    .featured-header { margin-bottom: 32px; }
+    .work-card-inner { padding: 24px; }
+    .work-title { font-size: 26px; }
+    .work-card-poster-wrap { height: 180px; }
+
+    /* Services */
+    .services { padding: 60px 20px; }
+    .services-header { margin-bottom: 48px; }
+    .service-card { padding: 28px 24px; }
+    .service-name { font-size: 22px; }
+
+    /* Listen */
+    .listen { padding: 48px 20px 60px; }
+    .listen-header { margin-bottom: 32px; }
+    .videos-grid { grid-template-columns: 1fr; }
+
+    /* Contact */
+    .contact { padding: 60px 20px; gap: 48px; }
+    .contact-info .section-title { font-size: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+    .btn-submit { width: 100%; text-align: center; }
+
+    /* Footer */
+    footer {
+      padding: 24px 20px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .footer-copy { order: 2; }
+
+    /* Modal */
+    .yt-modal-box { width: 100vw; border-radius: 0; }
+    .yt-modal-box iframe { height: 56vw; }
+  }
+
 </style>
 </head>
 <body>
